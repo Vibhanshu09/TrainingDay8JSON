@@ -183,13 +183,12 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                     Log.e("Error: ","1st");
                 }
             });
-            Toast.makeText(context, code + " : " + message, Toast.LENGTH_SHORT).show();
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
 
 
         }
-        else if (code.equals("login_false")){
+        else if (code.equals("login_false") || code.equals("login_true")){
             builder.setMessage(message);
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
@@ -198,10 +197,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
                     Log.e("Error: ","2nd");
                 }
             });
-            Toast.makeText(context, code + " : " + message, Toast.LENGTH_SHORT).show();
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
-
         }
 
 
